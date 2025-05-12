@@ -1,0 +1,86 @@
+import dbConnect from "@/lib/db/dbConnect";
+import FilesModel from "@/model/Files";
+import LanguagesModel from "@/model/Language";
+import LanguageTranslationModel from "@/model/LanguageTranslation";
+import AllNewsArticleModel from "@/model/news/NewsArticle";
+import { errorResponse, successResponse } from "@/utils/responseHandler";
+import mongoose from "mongoose";
+
+export async function GET(request) {
+  await dbConnect();
+
+  try {
+    const { searchParams } = new URL(request.url);
+    const targetId = searchParams.get("targetId");
+
+    // Validate Category and User IDs
+    if (!targetId || !mongoose.Types.ObjectId.isValid(targetId)) {
+      return errorResponse({
+        message: "Invalid request. Please try again later.",
+        status: 400,
+      });
+    }
+
+    // Get common news article details
+    const newsArticleCommonDetails = await AllNewsArticleModel.findById(
+      targetId
+    )
+      .select(
+        "-__v -title -shortDescription -description -isActive -isFeatured"
+      )
+      .populate({
+        path: "bannerImage",
+        model: FilesModel,
+        select: "fileUrl fileName fileType",
+      })
+      .populate({
+        path: "metaImage",
+        model: FilesModel,
+        select: "fileUrl fileName fileType",
+        match: { _id: { $ne: null } },
+      })
+      .exec();
+    if (!newsArticleCommonDetails) {
+      return errorResponse({
+        message: "News Article not found.",
+        status: 404,
+      });
+    }
+
+    // Get all types of languages ["en", "ar", ...]
+    const languagesList = await LanguagesModel.find({
+      status: true,
+    })
+      .select("code")
+      .exec();
+
+    // Fetch translations and format them as { "en": { ...translationData }, "ar": {}, ... }
+    const details = {};
+
+    await Promise.all(
+      languagesList.map(async (language) => {
+        const translation = await LanguageTranslationModel.findOne({
+          referenceType: "News Article",
+          referenceId: newsArticleCommonDetails._id.toString(),
+          lang: language.code,
+        })
+          .select("-referenceType -referenceId -__v -createdAt -updatedAt")
+          .exec();
+
+        details[language.code] = translation || {}; // Empty object if null
+      })
+    );
+
+    return successResponse({
+      status: 200,
+      newsArticleDetails: newsArticleCommonDetails,
+      translationData: details,
+    });
+  } catch (error) {
+    console.log(`Error in getting news article details SERVER: ${error}`);
+    return errorResponse({
+      message: "An unexpected error occurred. Internal server error.",
+      status: 500,
+    });
+  }
+}
