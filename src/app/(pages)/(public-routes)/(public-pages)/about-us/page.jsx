@@ -1,32 +1,21 @@
-import {
-  BannerSection,
-  ChairmanMessageSection,
-  FrontEndBreadcrumb,
-  OurMissionSection,
-  OurVisionSection,
-  WhyChooseUsSection,
-} from "@/components/public-pages-component";
-import ROUTES from "@/constants/routes";
+import { PageHeroSection } from "@/components/public-pages-component";
 
 const AboutUsPage = () => {
   return (
-    <div className="w-full mt-[82px] lg:mt-[94px]">
-      <FrontEndBreadcrumb
+    <>
+      {/* <FrontEndBreadcrumb
         fields={[{ label: "Home", link: ROUTES.HOME }]}
         currentTabName="About us"
         navContainerClass="flex flex-wrap items-center gap-2 mb-[24px]"
+      /> */}
+
+      <PageHeroSection
+        sectionId="about-page-hero-section"
+        bgImageClass="bg-about-hero-section-bg-image"
+        heading="About Us"
+        description="Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
       />
-
-      <BannerSection />
-
-      <OurMissionSection />
-
-      <OurVisionSection />
-
-      <WhyChooseUsSection />
-
-      <ChairmanMessageSection />
-    </div>
+    </>
   );
 };
 

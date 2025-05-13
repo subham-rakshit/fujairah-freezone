@@ -6,6 +6,20 @@ import Image from "next/image";
 const PartnerMovingLogos = ({ logos = [] }) => {
   if (logos.length === 0) return null;
 
+  const marqueeVariants = {
+    animate: {
+      x: [0, -1035],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 30,
+          ease: "linear",
+        },
+      },
+    },
+  };
+
   const renderLogos = (logo, index) => {
     const { src, alt } = logo;
 
@@ -26,17 +40,18 @@ const PartnerMovingLogos = ({ logos = [] }) => {
   };
 
   return (
-    <div className="overflow-hidden flex">
-      <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: "-66.66%" }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        className="flex flex-shrink-0 gap-5"
-      >
-        {[...logos, ...logos, ...logos].map((logo, index) =>
-          renderLogos(logo, index)
-        )}
-      </motion.div>
+    <div className="w-full h-[100px]">
+      <div className="marquee-container h-full flex items-center">
+        <motion.div
+          className="marquee-content flex gap-10"
+          variants={marqueeVariants}
+          animate="animate"
+        >
+          {[...logos, ...logos, ...logos].map((logo, index) =>
+            renderLogos(logo, index)
+          )}
+        </motion.div>
+      </div>
     </div>
   );
 };

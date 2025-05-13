@@ -47,6 +47,8 @@ const config = {
         "sidebar-bubble": "url('/assets/sidebar/img-4.jpg')",
         "home-hero-section-bg-image":
           "url('/fujairah-freezone/pages/home/home-hero-image.png')",
+        "about-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/about/about-hero-image.png')",
         "home-partners-section-bg-image":
           "url('/fujairah-freezone/pages/home/partners-img.png')",
         "hero-section-gradient":
@@ -62,7 +64,6 @@ const config = {
         "home-overlay-5": "url('/fujairah-freezone/overlay/overlay-5.svg')",
         "overlay-dot-shape":
           "url('/fujairah-freezone/overlay/overlay-side-half-dots-shape.svg')",
-        // "gradient-custom-1": "linear-gradient(90deg, #FFFFFF 0%, #BAF8FB 100%)",
       },
       fontFamily: {
         "poppins-extra-light": ["var(--font-poppins-extra-light)"],

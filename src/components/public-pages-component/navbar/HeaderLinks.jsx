@@ -11,7 +11,7 @@ const menuTree = [
   {
     _id: "menu-about-us-parent",
     name: "About Us",
-    link: "#",
+    link: "/about-us?tab=about-fujairah",
     children: [
       {
         _id: "menu-about-us-child-1",

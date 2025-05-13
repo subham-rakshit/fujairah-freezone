@@ -142,6 +142,26 @@ html .dark::-webkit-scrollbar-thumb {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+/* Marquee Style Start */
+
+.marquee-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.marquee-content {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Marquee Style End */
+
 @layer utilities {
   .transition-style {
     @apply transition-all duration-500 ease-linear;

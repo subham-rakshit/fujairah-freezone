@@ -76,6 +76,7 @@ import FlipCard from "./common/FlipCard";
 import FontResizerWrapper from "./common/FontResizerWrapper";
 import FooterLinks from "./common/FooterLinks";
 import FrontEndBreadcrumb from "./common/FrontEndBreadcrumb";
+import PageHeroSection from "./common/PageHeroSection";
 import PaginationSection from "./common/PaginationSection";
 import PriceCard from "./common/PriceCard";
 import SectionInfo from "./common/SectionInfo";
@@ -130,6 +131,7 @@ export {
   OurMissionSection,
   OurServices,
   OurVisionSection,
+  PageHeroSection,
   PageNavigationButton,
   PaginationSection,
   PartnerMovingLogos,

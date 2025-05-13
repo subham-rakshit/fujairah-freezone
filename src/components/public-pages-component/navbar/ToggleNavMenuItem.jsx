@@ -26,20 +26,22 @@ const ToggleNavMenuItem = ({
           onMouseEnter={() => setIsToggle(true)}
           onMouseLeave={() => setIsToggle(false)}
           onClick={() => setIsToggle((prev) => !prev)}
-          className={`text-dark-white font-poppins-md flex items-center gap-1 relative cursor-pointer py-4`}
+          className={`text-dark-white font-poppins-md relative cursor-pointer py-4`}
         >
-          <FontResizerWrapper
-            as="span"
-            fontClasses={{
-              0: "body-0-3",
-              1: "body3",
-              2: "body-3-1",
-            }}
-            className="inline-block"
-          >
-            {name || "Not Found"}
-          </FontResizerWrapper>
-          <IoIosArrowDown size={14} color="#fff" />
+          <Link href={link} className="flex items-center gap-1">
+            <FontResizerWrapper
+              as="span"
+              fontClasses={{
+                0: "body-0-3",
+                1: "body3",
+                2: "body-3-1",
+              }}
+              className="inline-block"
+            >
+              {name || "Not Found"}
+            </FontResizerWrapper>
+            <IoIosArrowDown size={14} color="#fff" />
+          </Link>
 
           {/* Dropdown Animation */}
           <AnimatePresence>
