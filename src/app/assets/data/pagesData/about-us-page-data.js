@@ -18,3 +18,31 @@ export const getAboutUsSectionCardsData = [
     icon: "/bin-yaber-assets/icons/hand-heart.png",
   },
 ];
+
+export const whyFujairahSectionData = [
+  {
+    icon: "/fujairah-freezone/pages/about/wfz-1.svg",
+    text1: "Variety of investment fields.",
+    text2: "Morem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/fujairah-freezone/pages/about/wfz-2.svg",
+    text1: "Investor-oriented policies",
+    text2: "Morem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/fujairah-freezone/pages/about/wfz-3.svg",
+    text1: "Efficient and cost-effective investment facilitation",
+    text2: "Morem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/fujairah-freezone/pages/about/wfz-4.svg",
+    text1: "Served by Fujairah Port and the Fujairah International Airport.",
+    text2: "Morem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/fujairah-freezone/pages/about/wfz-5.svg",
+    text1: "Full investment security",
+    text2: "Morem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];

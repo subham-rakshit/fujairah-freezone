@@ -393,6 +393,19 @@ html .dark::-webkit-scrollbar-thumb {
     @apply text-[#36393B];
   }
 
+  .text-primary-100 {
+    @apply text-[#80ABBF];
+  }
+  .text-primary-200 {
+    @apply text-[#669BB2];
+  }
+  .text-primary-300 {
+    @apply text-[#4D8AA5];
+  }
+  .text-primary-400 {
+    @apply text-[#00587E];
+  }
+
   /* === Text in Dark Mode === */
   .text-dark-white {
     @apply text-[#FFFFFF];

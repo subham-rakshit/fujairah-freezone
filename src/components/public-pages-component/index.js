@@ -22,9 +22,11 @@ import WhySetupSection from "./pages/home/WhySetupSection";
 // 2 About Us Page
 import BannerSection from "./pages/about-us/BannerSection";
 import ChairmanMessageSection from "./pages/about-us/ChairmanMessageSection";
+import ContentSection from "./pages/about-us/ContentSection";
 import OurMissionSection from "./pages/about-us/OurMissionSection";
 import OurVisionSection from "./pages/about-us/OurVisionSection";
 import WhyChooseUsSection from "./pages/about-us/WhyChooseUsSection";
+import WhyFujairahSection from "./pages/about-us/WhyFujairahSection";
 // 3 Careere Page
 import CareerListingSection from "./pages/careers/CareerListingSection";
 // 4 Offers Page
@@ -71,6 +73,7 @@ import PopularButton from "./buttons/PopularButton";
 import CommingSoonPage from "./common/CommingSoonPage";
 import CommonBannerSection from "./common/CommonBannerSection";
 import CommonSearchBox from "./common/CommonSearchBox";
+import CountUpNumber from "./common/CountUpNumber";
 import DataNotFound from "./common/DataNotFound";
 import FlipCard from "./common/FlipCard";
 import FontResizerWrapper from "./common/FontResizerWrapper";
@@ -80,6 +83,7 @@ import PageHeroSection from "./common/PageHeroSection";
 import PaginationSection from "./common/PaginationSection";
 import PriceCard from "./common/PriceCard";
 import SectionInfo from "./common/SectionInfo";
+import SectionTabs from "./common/SectionTabs";
 import ServicesCard from "./common/ServicesCard";
 
 export {
@@ -96,6 +100,8 @@ export {
   CommingSoonPage,
   CommonBannerSection,
   CommonSearchBox,
+  ContentSection,
+  CountUpNumber,
   CoursesSection,
   DarkButton,
   DataNotFound,
@@ -144,6 +150,7 @@ export {
   PublicPageFooter,
   PublicPageNavbar,
   SectionInfo,
+  SectionTabs,
   ServicesCard,
   SettingsButton,
   SocialMediaSection,
@@ -151,5 +158,6 @@ export {
   TestimonialSection,
   ToggleNavMenuItem,
   WhyChooseUsSection,
+  WhyFujairahSection,
   WhySetupSection,
 };
