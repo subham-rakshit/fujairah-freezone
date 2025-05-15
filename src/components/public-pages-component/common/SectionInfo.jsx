@@ -1,6 +1,11 @@
 import { FontResizerWrapper } from "..";
 
-const SectionInfo = ({ heading = "", subHeading = "", className = "" }) => {
+const SectionInfo = ({
+  heading = "",
+  headingColor = "text-gray-400",
+  subHeading = "",
+  className = "",
+}) => {
   if (!heading && !subHeading) return null;
 
   return (
@@ -13,7 +18,7 @@ const SectionInfo = ({ heading = "", subHeading = "", className = "" }) => {
             1: "heading-2",
             2: "heading-2-1",
           }}
-          className="text-gray-400 dark:text-dark-white font-family-primary font-[600] text-center mb-[6px]"
+          className={`${headingColor} dark:text-dark-white font-family-primary font-[600] text-center mb-[6px]`}
         >
           {heading}
         </FontResizerWrapper>

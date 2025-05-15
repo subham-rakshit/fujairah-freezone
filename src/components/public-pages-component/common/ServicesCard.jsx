@@ -7,16 +7,16 @@ const ServicesCard = ({ service = {} }) => {
   return (
     <div
       key={service._id}
-      className="h-[450px] rounded-[24px] overflow-hidden group hover:shadow-card-custom-small transition-all duration-500 ease-in-out bg-white"
+      className="h-[450px] rounded-[24px] overflow-hidden shadow-card-custom-small bg-white"
     >
-      <div className="relative w-full h-1/2">
+      <div className="relative w-full h-1/2 overflow-hidden">
         <Image
           src={service.imageSrc}
           alt={service.alt}
           fill
           priority={false}
           sizes="(max-width: 768px) 100vw, 100vw"
-          className="object-cover group-hover:scale-[1.05] transition-all duration-500 ease-in-out"
+          className="object-cover hover:scale-[1.05] transition-all duration-500 ease-in-out"
         />
       </div>
 

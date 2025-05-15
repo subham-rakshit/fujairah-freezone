@@ -36,7 +36,7 @@ const menuTree = [
   {
     _id: "menu-start-your-business-parent",
     name: "Start Your Business",
-    link: "#",
+    link: "/start-your-business",
     children: [
       {
         _id: "menu-start-your-business-child-1",
@@ -128,7 +128,7 @@ const menuTree = [
   {
     _id: "menu-media-center-parent",
     name: "Media Center",
-    link: "/media-center",
+    link: "/media-center?tab=news-%26-events",
     children: [
       {
         _id: "menu-media-center-child-1",
@@ -153,7 +153,7 @@ const menuTree = [
   {
     _id: "menu-investors-corner-parent",
     name: "Investors Corner",
-    link: "/investors-corner",
+    link: "/investors-corner?tab=business-club",
     children: [
       {
         _id: "menu-investors-corner-child-1",
@@ -178,7 +178,7 @@ const menuTree = [
   {
     _id: "menu-faqs-parent",
     name: "FAQs",
-    link: "/faqs",
+    link: "/faqs?tab=category",
     children: [],
   },
 ];

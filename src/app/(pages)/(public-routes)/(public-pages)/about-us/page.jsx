@@ -72,7 +72,9 @@ const AboutUsPage = async ({ searchParams }) => {
               ]}
               currentTabName={tab
                 .split("-")
-                .map((word) => word[0].toUpperCase() + word.slice(1))
+                .map((word) =>
+                  word.length > 1 ? word[0].toUpperCase() + word.slice(1) : word
+                )
                 .join(" ")}
               timestamp="10th March, 2025"
               navContainerClass="flex flex-wrap items-center gap-1"

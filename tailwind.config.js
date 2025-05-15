@@ -49,12 +49,26 @@ const config = {
           "url('/fujairah-freezone/pages/home/home-hero-image.png')",
         "about-hero-section-bg-image":
           "url('/fujairah-freezone/pages/about/about-hero-image.png')",
+        "start-your-business-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/start-your-business/start-ur-business-hero-image.png')",
+        "our-services-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/our-services/our-services-hero-image.png')",
+        "media-center-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/media-center/media-center-hero-image.png')",
+        "investors-corner-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/investors-corner/investors-corner-hero-image.png')",
+        "contact-us-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/contact-us/contact-us-hero-image.png')",
+        "faqs-hero-section-bg-image":
+          "url('/fujairah-freezone/pages/faqs/faqs-hero-image.png')",
         "home-partners-section-bg-image":
           "url('/fujairah-freezone/pages/home/partners-img.png')",
         "hero-section-gradient":
           "linear-gradient(107.98deg, #000000 0.81%, rgba(0, 0, 0, 0) 72.1%)",
         "hero-section-gradient-mobile":
           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
+        "blue-gradient": `linear-gradient(270deg, rgba(0, 88, 126, 0) 0%, rgba(0, 88, 126, 0.28) 70.5%),
+           linear-gradient(152.25deg, rgba(0, 0, 0, 0.5) 17.24%, rgba(0, 0, 0, 0) 68.17%)`,
         "home-overlay-1":
           "url('/fujairah-freezone/overlay/home-overlay-1.svg')",
         "home-overlay-2":
@@ -90,6 +104,8 @@ const config = {
         "custom-top": "0px -12px 80px 0px #00000099",
         "card-custom": "0px 12px 4px 0px #00000040",
         "card-custom-small": "0px 4px 4px 0px #00000040",
+        "custom-three-sides": "9px 10px 12px 0px #00000040",
+        "custom-blue": "0px 4px 4px 0px #00587E80",
       },
       colors: {
         dark: {

@@ -15,7 +15,7 @@ const BackgroundRevealButton = ({
 }) => {
   return (
     <button
-      className={`${btnHeight} group relative bg-transparent transition-all duration-500 ease-in-out rounded-full`}
+      className={`${btnHeight} w-fit group relative bg-transparent transition-all duration-500 ease-in-out rounded-full`}
     >
       <div
         className={`absolute top-0 left-0 rounded-full bg-[#E4E419] ${innerBtnContainerWidth} h-full group-hover:bg-[#005b78] group-hover:w-full transition-all duration-500 ease-in-out`}
@@ -25,13 +25,13 @@ const BackgroundRevealButton = ({
         <FontResizerWrapper
           as="span"
           fontClasses={customFontSize}
-          className={`${textColor} group-hover:text-dark-white font-family-secondary font-[500] transition-all duration-500 ease-in-out uppercase`}
+          className={`${textColor} dark:text-dark-white group-hover:text-dark-white font-family-secondary font-[500] transition-all duration-500 ease-in-out uppercase`}
         >
           {btnLabel}
         </FontResizerWrapper>
         <FaLongArrowAltRight
           size={iconSize}
-          className={`${textColor} ml-2 z-[99] group-hover:bg-[#fff] group-hover:text-[#005b78] group-hover:p-[3px] group-hover:rounded-full transition-all duration-500 ease-in-out`}
+          className={`${textColor} dark:text-dark-white ml-2 z-[99] group-hover:bg-[#fff] group-hover:text-[#005b78] group-hover:p-[3px] group-hover:rounded-full transition-all duration-500 ease-in-out`}
         />
       </span>
     </button>

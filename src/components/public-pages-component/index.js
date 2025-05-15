@@ -27,6 +27,22 @@ import OurMissionSection from "./pages/about-us/OurMissionSection";
 import OurVisionSection from "./pages/about-us/OurVisionSection";
 import WhyChooseUsSection from "./pages/about-us/WhyChooseUsSection";
 import WhyFujairahSection from "./pages/about-us/WhyFujairahSection";
+// 3 Start Your Business Page
+import FieldsOfInvestmentSection from "./pages/start-your-business/FieldsOfInvestmentSection";
+import StartYourBusinessInfoSection from "./pages/start-your-business/StartYourBusinessInfoSection";
+// 4 Our Services Page
+import CommitmentsSection from "./pages/our-services/CommitmentsSection";
+import WhatWeOfferSection from "./pages/our-services/WhatWeOfferSection";
+// 5 Media Center Page
+import NewsEventsContentSection from "./pages/media-center/NewsEventsContentSection";
+// 6 Investors Corner Page
+import BusinessClubSection from "./pages/investors-corner/BusinessClubSection";
+// 7 Contact Us Page
+import ContactFormSection from "./pages/contact-us/ContactFormSection";
+import ContactMapSection from "./pages/contact-us/ContactMapSection";
+import OurAgentsContactSection from "./pages/contact-us/OurAgentsContactSection";
+// 8 FAQs Page
+import FAQsContentSection from "./pages/faqs/FAQsContentSection";
 // 3 Careere Page
 import CareerListingSection from "./pages/careers/CareerListingSection";
 // 4 Offers Page
@@ -92,21 +108,27 @@ export {
   AppLogo,
   BackgroundRevealButton,
   BannerSection,
+  BusinessClubSection,
   BusinessSetup,
   CallToActionButton,
   CareerListingSection,
   CarouselButtons,
   ChairmanMessageSection,
   CommingSoonPage,
+  CommitmentsSection,
   CommonBannerSection,
   CommonSearchBox,
+  ContactFormSection,
+  ContactMapSection,
   ContentSection,
   CountUpNumber,
   CoursesSection,
   DarkButton,
   DataNotFound,
   DrawOutlineLinkButton,
+  FAQsContentSection,
   FaqSection,
+  FieldsOfInvestmentSection,
   FlipCard,
   FontResizerWrapper,
   FooterContactInfoWidget,
@@ -130,10 +152,12 @@ export {
   NewsCategoryListingSection,
   NewsContentNavigation,
   NewsDetailsSection,
+  NewsEventsContentSection,
   NewsListingSection,
   NewsSection,
   OffersBannerSection,
   OffersContentSection,
+  OurAgentsContactSection,
   OurMissionSection,
   OurServices,
   OurVisionSection,
@@ -155,8 +179,10 @@ export {
   SettingsButton,
   SocialMediaSection,
   StartupGridSection,
+  StartYourBusinessInfoSection,
   TestimonialSection,
   ToggleNavMenuItem,
+  WhatWeOfferSection,
   WhyChooseUsSection,
   WhyFujairahSection,
   WhySetupSection,
