@@ -1,10 +1,18 @@
 import Image from "next/image";
-import { BackgroundRevealButton, FontResizerWrapper } from "../..";
+import {
+  BackgroundRevealButton,
+  FontResizerWrapper,
+  RevealOnView,
+} from "../..";
 
 const ContactFormSection = () => {
   return (
     <div className="relative z-[99] grid grid-cols-12 max-screen-width px-5 my-[100px]">
-      <div className="col-span-4 w-full h-[800px] relative overflow-hidden rounded-[24px] shadow-card-custom-small">
+      <RevealOnView
+        as="div"
+        yOffset={100}
+        className="col-span-4 w-full h-[800px] relative overflow-hidden rounded-[24px] shadow-card-custom-small"
+      >
         <Image
           src="/fujairah-freezone/pages/home/get-in-touch.png"
           alt="contact"
@@ -12,9 +20,14 @@ const ContactFormSection = () => {
           sizes="(max-width: 768px) 100vw, 100vw"
           className="object-cover scale-x-[-1]"
         />
-      </div>
+      </RevealOnView>
 
-      <div className="relative col-span-8 bg-white h-[95%] my-auto rounded-tr-[24px] rounded-br-[24px] overflow-hidden">
+      <RevealOnView
+        as="div"
+        yOffset={100}
+        delay={0.4}
+        className="relative col-span-8 bg-white h-[95%] my-auto rounded-tr-[24px] rounded-br-[24px] overflow-hidden"
+      >
         <div className="absolute top-full -translate-y-full right-0 size-[400px]">
           <Image
             src="/fujairah-freezone/overlay/overlay-6.svg"
@@ -144,7 +157,7 @@ const ContactFormSection = () => {
             className="w-fit"
           />
         </form>
-      </div>
+      </RevealOnView>
     </div>
   );
 };

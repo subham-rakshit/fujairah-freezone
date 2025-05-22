@@ -1,12 +1,15 @@
 import Image from "next/image";
-import { BackgroundRevealButton, FontResizerWrapper } from "..";
+import { BackgroundRevealButton, FontResizerWrapper, RevealOnView } from "..";
 
-const ServicesCard = ({ service = {} }) => {
+const ServicesCard = ({ service = {}, delay = 0 }) => {
   if (Object.keys(service).length === 0) return null;
 
   return (
-    <div
+    <RevealOnView
       key={service._id}
+      as="div"
+      yOffset={100}
+      delay={delay}
       className="h-[450px] rounded-[24px] overflow-hidden shadow-card-custom-small bg-white"
     >
       <div className="relative w-full h-1/2 overflow-hidden">
@@ -60,7 +63,7 @@ const ServicesCard = ({ service = {} }) => {
           />
         </div>
       </div>
-    </div>
+    </RevealOnView>
   );
 };
 

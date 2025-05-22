@@ -14,7 +14,7 @@ import { GoMail } from "react-icons/go";
 import { GrLocation } from "react-icons/gr";
 import { RiTwitterXFill } from "react-icons/ri";
 import { TbArrowBigDown } from "react-icons/tb";
-import { BackgroundRevealButton, FontResizerWrapper } from "..";
+import { BackgroundRevealButton, FontResizerWrapper, RevealOnView } from "..";
 
 const socials = [
   {
@@ -38,7 +38,7 @@ const socials = [
 const PublicPageFooter = async () => {
   return (
     <footer className="relative py-[30px] px-[30px] shadow-custom-top bg-[linear-gradient(270deg,_#00587E_0%,_#C8212B_100%)]">
-      <div className="relative max-screen-width py-10">
+      <div className="relative max-screen-width-layout py-10">
         <div className="relative z-[100] w-full max-w-fit p-[25px] border-2 border-[#ffffff50] bg-[#ffffff10] rounded-[24px]">
           <FontResizerWrapper
             as="h1"
@@ -73,7 +73,11 @@ const PublicPageFooter = async () => {
           <BackgroundRevealButton btnLabel="Start Business Now" />
         </div>
 
-        <div className="absolute right-0 top-[-250px] w-[100%] h-[200%] z-[9]">
+        <RevealOnView
+          as="div"
+          yOffset={100}
+          className="absolute right-0 top-[-250px] w-[100%] h-[200%] z-[9]"
+        >
           <Image
             src="/fujairah-freezone/footer-image.png"
             alt="image"
@@ -82,7 +86,7 @@ const PublicPageFooter = async () => {
             sizes="(max-width: 768px) 100vw, 100vw"
             className="object-contain object-right"
           />
-        </div>
+        </RevealOnView>
       </div>
 
       <div className="relative z-[100] rounded-[24px] py-[39px] px-[30px] bg-gradient-to-r from-white to-[#BAF8FB]">

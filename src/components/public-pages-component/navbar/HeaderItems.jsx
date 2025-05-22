@@ -58,7 +58,7 @@ const HeaderItems = () => {
       <div
         className={`${isScrolled ? "h-0 opacity-0" : "h-[50px] opacity-100"} overflow-hidden bg-gray-alt w-full transition-all duration-500 ease-in-out`}
       >
-        <div className="max-screen-width flex size-full items-center justify-between gap-5 px-5">
+        <div className="max-screen-width-layout flex size-full items-center justify-between gap-5 px-5">
           <div className="flex h-full items-center gap-5">
             {/* Phone Number */}
             <div className="flex items-center gap-[6px]">
@@ -117,7 +117,7 @@ const HeaderItems = () => {
       <nav
         className={`w-full py-[6px] ${isScrolled ? "bg-[#000]/80" : "bg-transparent"} transition-all duration-500 ease-in-out`}
       >
-        <div className="max-screen-width flex h-full items-center justify-between gap-5 px-5">
+        <div className="max-screen-width-layout flex h-full items-center justify-between gap-5 px-5">
           {/* Logo */}
           <Link href="/">
             <div className="relative size-[75px] overflow-hidden">

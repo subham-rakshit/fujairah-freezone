@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { FontResizerWrapper, PartnerMovingLogos } from "../..";
+import { FontResizerWrapper, PartnerMovingLogos, RevealOnView } from "../..";
 
 const PartnersSection = () => {
   const logos = useMemo(
@@ -30,22 +30,23 @@ const PartnersSection = () => {
       className="w-full py-[70px] relative bg-home-partners-section-bg-image bg-cover bg-center"
     >
       <div className="absolute inset-0 bg-[#00587EB2]" />
+      <RevealOnView as="div" yOffset={100}>
+        <div className="relative z-[99]">
+          <FontResizerWrapper
+            as="h1"
+            fontClasses={{
+              0: "heading-0-2",
+              1: "heading-2",
+              2: "heading-2-1",
+            }}
+            className="max-screen-width text-dark-white font-poppins-rg font-[600] px-5 mb-[30px]"
+          >
+            Partners
+          </FontResizerWrapper>
 
-      <div className="relative z-[99]">
-        <FontResizerWrapper
-          as="h1"
-          fontClasses={{
-            0: "heading-0-2",
-            1: "heading-2",
-            2: "heading-2-1",
-          }}
-          className="max-screen-width text-dark-white font-poppins-rg font-[600] px-5 mb-[30px]"
-        >
-          Partners
-        </FontResizerWrapper>
-
-        <PartnerMovingLogos logos={logos} />
-      </div>
+          <PartnerMovingLogos logos={logos} />
+        </div>
+      </RevealOnView>
     </section>
   );
 };

@@ -29,9 +29,13 @@ const OurServices = () => {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {ourServices.map((service, index) => (
-            <ServicesCard key={service._id} service={service} />
-          ))}
+          {ourServices.map((service, index) => {
+            const delay = index === 0 ? 0 : 0.2 + (index - 1) * 0.2;
+
+            return (
+              <ServicesCard key={service._id} service={service} delay={delay} />
+            );
+          })}
         </div>
       </div>
     </section>

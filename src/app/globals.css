@@ -415,8 +415,11 @@ html .dark::-webkit-scrollbar-thumb {
   }
 
   /* === Custom === */
+  .max-screen-width-layout {
+    @apply w-full max-w-[1480px] mx-auto;
+  }
   .max-screen-width {
-    @apply w-full max-w-[1680px] mx-auto;
+    @apply w-full max-w-[1350px] mx-auto;
   }
 
   .font-family-primary {
@@ -440,32 +443,32 @@ html .dark::-webkit-scrollbar-thumb {
 
 @theme inline {
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
   @keyframes meteor {
-  0% {
-    transform: rotate(var(--angle)) translateX(0);
-    opacity: 1;
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
     }
-  70% {
-    opacity: 1;
+    70% {
+      opacity: 1;
     }
-  100% {
-    transform: rotate(var(--angle)) translateX(-500px);
-    opacity: 0;
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
     }
   }
 }

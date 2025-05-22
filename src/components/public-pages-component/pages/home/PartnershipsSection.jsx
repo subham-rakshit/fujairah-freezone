@@ -1,35 +1,44 @@
 import Image from "next/image";
-import { BackgroundRevealButton, FontResizerWrapper } from "../..";
+import {
+  BackgroundRevealButton,
+  FontResizerWrapper,
+  RevealOnView,
+} from "../..";
 
 const PartnershipsSection = () => {
   return (
     <section id="home-page-partnerships-section" className="w-full px-5">
       <div className="w-full max-screen-width h-[500px] border border-[#00000060] rounded-[24px] flex items-center overflow-hidden pl-5">
-        <div>
-          <FontResizerWrapper
-            as="h1"
-            fontClasses={{
-              0: "heading-0-2",
-              1: "heading-2",
-              2: "heading-2-1",
-            }}
-            className="text-gray-400 font-family-primary font-[600]"
-          >
-            Looking to create partnerships for your business?
-          </FontResizerWrapper>
+        <div className="overflow-hidden">
+          <RevealOnView as="div" xOffset={-100}>
+            <FontResizerWrapper
+              as="h1"
+              fontClasses={{
+                0: "heading-0-2",
+                1: "heading-2",
+                2: "heading-2-1",
+              }}
+              className="text-gray-400 font-family-primary font-[600]"
+            >
+              Looking to create partnerships for your business?
+            </FontResizerWrapper>
+          </RevealOnView>
 
-          <FontResizerWrapper
-            as="p"
-            fontClasses={{
-              0: "subtitle-0-1",
-              1: "subtitle-1",
-              2: "subtitle-1-1",
-            }}
-            className="text-gray-400 font-family-secondary font-[500] my-[24px]"
-          >
-            “Fostering long-term strategic collaborations that drive innovation,
-            create shared value, and shape the future of industry together.”
-          </FontResizerWrapper>
+          <RevealOnView as="div" yOffset={100}>
+            <FontResizerWrapper
+              as="p"
+              fontClasses={{
+                0: "subtitle-0-1",
+                1: "subtitle-1",
+                2: "subtitle-1-1",
+              }}
+              className="text-gray-400 font-family-secondary font-[500] my-[24px]"
+            >
+              “Fostering long-term strategic collaborations that drive
+              innovation, create shared value, and shape the future of industry
+              together.”
+            </FontResizerWrapper>
+          </RevealOnView>
 
           <BackgroundRevealButton
             btnLabel="Partnership Offers"

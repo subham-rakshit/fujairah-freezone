@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FontResizerWrapper, SectionInfo } from "../..";
+import { FontResizerWrapper, RevealOnView, SectionInfo } from "../..";
 
 const BusinessClubSection = () => {
   return (
@@ -11,7 +11,7 @@ const BusinessClubSection = () => {
         className="mb-[60px]"
       />
 
-      <div className="relative">
+      <RevealOnView as="div" yOffset={100} className="relative">
         <div className="relative overflow-hidden w-full h-[500px] rounded-[24px]">
           <Image
             src="/fujairah-freezone/pages/investors-corner/business-club-1.png"
@@ -51,10 +51,14 @@ const BusinessClubSection = () => {
             Majlis, Ballroom, Meeting Rooms, An Ideal Conference Space.
           </FontResizerWrapper>
         </div>
-      </div>
+      </RevealOnView>
 
-      <div className="grid grid-cols-2 gap-10 my-[200px]">
-        <div className="w-full h-full flex flex-col justify-center gap-8">
+      <div className="grid grid-cols-2 gap-10 my-[200px] overflow-hidden">
+        <RevealOnView
+          as="div"
+          yOffset={100}
+          className="w-full h-full flex flex-col justify-center gap-8"
+        >
           <FontResizerWrapper
             as="h1"
             fontClasses={{
@@ -82,9 +86,14 @@ const BusinessClubSection = () => {
             aptent taciti sociosqu ad litora torquent per conubia nostra, per
             inceptos himenaeos.
           </FontResizerWrapper>
-        </div>
+        </RevealOnView>
 
-        <div className="relative w-full h-[500px] rounded-[24px] overflow-hidden">
+        <RevealOnView
+          as="div"
+          yOffset={100}
+          delay={0.4}
+          className="relative w-full h-[500px] rounded-[24px] overflow-hidden"
+        >
           <Image
             src="/fujairah-freezone/pages/investors-corner/business-club-2.png"
             alt="Business"
@@ -92,7 +101,7 @@ const BusinessClubSection = () => {
             sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover"
           />
-        </div>
+        </RevealOnView>
       </div>
     </div>
   );

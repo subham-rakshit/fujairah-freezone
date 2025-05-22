@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { BackgroundRevealButton, FontResizerWrapper } from "../..";
+import {
+  BackgroundRevealButton,
+  FontResizerWrapper,
+  RevealOnView,
+} from "../..";
 
 const GetInTouch = () => {
   return (
@@ -10,7 +14,11 @@ const GetInTouch = () => {
       <div className="absolute inset-0 bg-home-overlay-4 bg-cover opacity-80" />
 
       <div className="relative z-[99] grid grid-cols-12 max-screen-width px-5">
-        <div className="col-span-4 w-full h-[800px] relative overflow-hidden rounded-[24px] shadow-card-custom-small">
+        <RevealOnView
+          as="div"
+          yOffset={50}
+          className="col-span-4 w-full h-[800px] relative overflow-hidden rounded-[24px] shadow-card-custom-small"
+        >
           <Image
             src="/fujairah-freezone/pages/home/get-in-touch.png"
             alt="contact"
@@ -18,9 +26,14 @@ const GetInTouch = () => {
             sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover scale-x-[-1]"
           />
-        </div>
+        </RevealOnView>
 
-        <div className="relative col-span-8 bg-white h-[95%] my-auto rounded-tr-[24px] rounded-br-[24px] overflow-hidden">
+        <RevealOnView
+          as="div"
+          yOffset={50}
+          delay={0.4}
+          className="relative col-span-8 bg-white h-[95%] my-auto rounded-tr-[24px] rounded-br-[24px] overflow-hidden"
+        >
           <div className="absolute top-full -translate-y-full right-0 size-[400px]">
             <Image
               src="/fujairah-freezone/overlay/overlay-6.svg"
@@ -150,7 +163,7 @@ const GetInTouch = () => {
               className="w-fit"
             />
           </form>
-        </div>
+        </RevealOnView>
       </div>
     </section>
   );

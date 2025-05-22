@@ -1,6 +1,6 @@
 "use client";
 
-import { FontResizerWrapper, SectionInfo } from "../..";
+import { FontResizerWrapper, RevealOnView, SectionInfo } from "../..";
 
 import { testimonials } from "@/app/assets/data/pagesData/home-page-data";
 import Image from "next/image";
@@ -72,76 +72,86 @@ const TestimonialSection = () => {
             </div>
 
             <Slider ref={setSliderRef} {...settings}>
-              {testimonials.map((item) => (
-                <div key={item._id} className="px-2">
-                  <div className="relative h-[450px] rounded-[24px] shadow-lg my-3 overflow-hidden bg-white py-[20px] px-4">
-                    <div className="absolute top-[-120px] left-[-50%] w-[200%] h-[300px] bg-primary-400 rounded-b-[50%] shadow-[0px_17.26px_35.96px_0px_#4747B933]"></div>
+              {testimonials.map((item, index) => {
+                const delay = index === 0 ? 0 : 0.2 + (index - 1) * 0.2;
 
-                    <div className="size-full relative z-[10] flex flex-col items-center justify-between">
-                      {/* Ratings */}
-                      <div className="flex items-center gap-[2px]">
-                        {Array(Number(item.numOfStars))
-                          .fill(0)
-                          .map((_, index) => (
-                            <FaStar key={index} size={20} color="#FFCF0D" />
-                          ))}
-                      </div>
+                return (
+                  <RevealOnView
+                    key={item._id}
+                    as="div"
+                    yOffset={50}
+                    delay={delay}
+                    className="px-2"
+                  >
+                    <div className="relative h-[450px] rounded-[24px] shadow-lg my-3 overflow-hidden bg-white py-[20px] px-4">
+                      <div className="absolute top-[-120px] left-[-50%] w-[200%] h-[300px] bg-primary-400 rounded-b-[50%] shadow-[0px_17.26px_35.96px_0px_#4747B933]"></div>
 
-                      {/* User Image */}
-                      <div className="relative size-[160px] rounded-full shadow-[0px_17.26px_35.96px_0px_#4747B933] overflow-hidden">
-                        <Image
-                          src={item.clientImageSrc}
-                          alt={item.name}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 100vw"
-                          className="object-cover"
-                        />
-                      </div>
+                      <div className="size-full relative z-[10] flex flex-col items-center justify-between">
+                        {/* Ratings */}
+                        <div className="flex items-center gap-[2px]">
+                          {Array(Number(item.numOfStars))
+                            .fill(0)
+                            .map((_, index) => (
+                              <FaStar key={index} size={20} color="#FFCF0D" />
+                            ))}
+                        </div>
 
-                      <div>
-                        {/* User Name */}
+                        {/* User Image */}
+                        <div className="relative size-[160px] rounded-full shadow-[0px_17.26px_35.96px_0px_#4747B933] overflow-hidden">
+                          <Image
+                            src={item.clientImageSrc}
+                            alt={item.name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 100vw"
+                            className="object-cover"
+                          />
+                        </div>
+
+                        <div>
+                          {/* User Name */}
+                          <FontResizerWrapper
+                            as="h5"
+                            fontClasses={{
+                              0: "body-0-2",
+                              1: "body2",
+                              2: "body-2-1",
+                            }}
+                            className="text-gray-400 font-family-secondary font-[600] text-center"
+                          >
+                            {item.name}
+                          </FontResizerWrapper>
+
+                          {/* User Name */}
+                          <FontResizerWrapper
+                            as="h6"
+                            fontClasses={{
+                              0: "body-0-3",
+                              1: "body3",
+                              2: "body-3-1",
+                            }}
+                            className="text-gray-350 font-family-secondary font-[400] text-center"
+                          >
+                            {item.designation}
+                          </FontResizerWrapper>
+                        </div>
+
+                        {/* User Message */}
                         <FontResizerWrapper
-                          as="h5"
+                          as="p"
                           fontClasses={{
                             0: "body-0-2",
                             1: "body2",
                             2: "body-2-1",
                           }}
-                          className="text-gray-400 font-family-secondary font-[600] text-center"
+                          className="text-gray-400 font-family-secondary font-[400]"
                         >
-                          {item.name}
-                        </FontResizerWrapper>
-
-                        {/* User Name */}
-                        <FontResizerWrapper
-                          as="h6"
-                          fontClasses={{
-                            0: "body-0-3",
-                            1: "body3",
-                            2: "body-3-1",
-                          }}
-                          className="text-gray-350 font-family-secondary font-[400] text-center"
-                        >
-                          {item.designation}
+                          {item.message}
                         </FontResizerWrapper>
                       </div>
-
-                      {/* User Message */}
-                      <FontResizerWrapper
-                        as="p"
-                        fontClasses={{
-                          0: "body-0-2",
-                          1: "body2",
-                          2: "body-2-1",
-                        }}
-                        className="text-gray-400 font-family-secondary font-[400]"
-                      >
-                        {item.message}
-                      </FontResizerWrapper>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </RevealOnView>
+                );
+              })}
             </Slider>
           </div>
         </div>
