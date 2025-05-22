@@ -14,7 +14,7 @@ const AboutCompanySection = () => {
       <div className="absolute inset-0 bg-home-overlay-1 bg-cover opacity-80" />
 
       <div className="relative max-screen-width px-5 z-[99] grid grid-cols-1 md:grid-cols-2 items-center gap-[50px] 2xl:gap-[120px]">
-        <RevealOnView as="div" viewport={{ margin: "100px" }}>
+        <RevealOnView as="div" yOffset={50}>
           <FontResizerWrapper
             as="h1"
             fontClasses={{
