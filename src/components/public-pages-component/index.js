@@ -98,6 +98,7 @@ import FrontEndBreadcrumb from "./common/FrontEndBreadcrumb";
 import PageHeroSection from "./common/PageHeroSection";
 import PaginationSection from "./common/PaginationSection";
 import PriceCard from "./common/PriceCard";
+import RevealOnView from "./common/RevealOnView";
 import SectionInfo from "./common/SectionInfo";
 import SectionTabs from "./common/SectionTabs";
 import ServicesCard from "./common/ServicesCard";
@@ -173,6 +174,7 @@ export {
   PublicFooterLogoAndSocialLinks,
   PublicPageFooter,
   PublicPageNavbar,
+  RevealOnView,
   SectionInfo,
   SectionTabs,
   ServicesCard,

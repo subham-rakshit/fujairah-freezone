@@ -1,3 +1,4 @@
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { BackgroundRevealButton, FontResizerWrapper } from "..";
 
 const PageHeroSection = ({
@@ -29,17 +30,19 @@ const PageHeroSection = ({
             </FontResizerWrapper>
           )}
           {heading && (
-            <FontResizerWrapper
-              as="h1"
-              fontClasses={{
-                0: "heading-0-1",
-                1: "heading-1",
-                2: "heading-1-1",
-              }}
-              className="text-dark-white font-family-primary capitalize mb-[24px]"
-            >
-              {heading}
-            </FontResizerWrapper>
+            <TypingAnimation loop={true} duration={150}>
+              <FontResizerWrapper
+                as="h1"
+                fontClasses={{
+                  0: "heading-0-1",
+                  1: "heading-1",
+                  2: "heading-1-1",
+                }}
+                className="text-dark-white font-family-primary capitalize mb-[24px]"
+              >
+                {heading}
+              </FontResizerWrapper>
+            </TypingAnimation>
           )}
           {description && (
             <FontResizerWrapper

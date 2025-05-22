@@ -25,6 +25,7 @@ const HomePage = () => {
         description="Fujairah's strategic & unique location, as the UAE's only Emirate on East Coast, plays a key role in its development. Under the leadership and vision of Sheikh Hamed Bin Mohammed Al Sharqi, the Ruler of Fujairah, the Emirates continues to grow."
         btnLabel="Start Business Now"
       />
+
       <AboutCompanySection />
       {/* <StartupGridSection /> */}
       <WhySetupSection />

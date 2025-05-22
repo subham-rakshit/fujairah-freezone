@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { BackgroundRevealButton, FontResizerWrapper } from "../..";
+import {
+  BackgroundRevealButton,
+  FontResizerWrapper,
+  RevealOnView,
+} from "../..";
 
 const AboutCompanySection = () => {
   return (
@@ -10,7 +14,7 @@ const AboutCompanySection = () => {
       <div className="absolute inset-0 bg-home-overlay-1 bg-cover opacity-80" />
 
       <div className="relative max-screen-width px-5 z-[99] grid grid-cols-1 md:grid-cols-2 items-center gap-[50px] 2xl:gap-[120px]">
-        <div>
+        <RevealOnView as="div" viewport={{ margin: "100px" }}>
           <FontResizerWrapper
             as="h1"
             fontClasses={{
@@ -42,7 +46,7 @@ const AboutCompanySection = () => {
             btnLabel="About Us"
             textColor="text-gray-400 dark:text-dark-white"
           />
-        </div>
+        </RevealOnView>
 
         <div className="relative w-full max-h-[450px] aspect-square">
           <Image
