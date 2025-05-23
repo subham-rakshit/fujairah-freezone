@@ -62,7 +62,7 @@ const FieldsOfInvestmentSection = () => {
 
                 <BackgroundRevealButton
                   btnLabel="Explore Now"
-                  textColor="text-gray-400"
+                  textColor="text-gray-400 dark:text-dark-white"
                   customFontSize={{
                     0: "body-0-2",
                     1: "body2",

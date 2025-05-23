@@ -120,7 +120,7 @@ const PublicPageFooter = async () => {
                   }}
                   className="font-poppins-rg font-medium"
                 >
-                  +971-44220781
+                  +971 9 222 8000
                 </FontResizerWrapper>
               </div>
 
@@ -160,8 +160,8 @@ const PublicPageFooter = async () => {
                   }}
                   className="font-poppins-rg font-medium max-w-[400px]"
                 >
-                  Ground Floor, Creek Tower, Beside Land Department, Baniyas
-                  Road , Deira - Dubai.
+                  Fujairah Freezone Authority, Near Mina Sakamkam, Fujairah,
+                  U.A.E
                 </FontResizerWrapper>
               </div>
 

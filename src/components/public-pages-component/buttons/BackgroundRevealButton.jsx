@@ -25,13 +25,13 @@ const BackgroundRevealButton = ({
         <FontResizerWrapper
           as="span"
           fontClasses={customFontSize}
-          className={`${textColor} dark:text-dark-white group-hover:text-dark-white font-family-secondary font-[500] transition-all duration-500 ease-in-out uppercase`}
+          className={`${textColor} group-hover:text-dark-white font-family-secondary font-[500] transition-all duration-500 ease-in-out uppercase`}
         >
           {btnLabel}
         </FontResizerWrapper>
         <FaLongArrowAltRight
           size={iconSize}
-          className={`${textColor} dark:text-dark-white ml-2 z-[99] group-hover:bg-[#fff] group-hover:text-[#005b78] group-hover:p-[3px] group-hover:rounded-full transition-all duration-500 ease-in-out`}
+          className={`${textColor} ml-2 z-[99] group-hover:bg-[#fff] group-hover:text-[#005b78] group-hover:p-[3px] group-hover:rounded-full transition-all duration-500 ease-in-out`}
         />
       </span>
     </button>

@@ -40,7 +40,7 @@ const OurAgentsContactSection = () => {
                 as="div"
                 yOffset={100}
                 delay={delay}
-                className="flex items-center justify-between gap-2 px-[20px] py-[40px] rounded-[24px] shadow-card-custom-small border border-[#00587E10]"
+                className="flex items-center justify-between gap-2 px-[20px] py-[40px] rounded-[24px] shadow-card-custom-small dark:bg-white border border-[#00587E10]"
               >
                 <div className="relative size-[70px] overflow-hidden">
                   <Image
@@ -60,7 +60,7 @@ const OurAgentsContactSection = () => {
                       1: "subtitle-2",
                       2: "subtitle-2-1",
                     }}
-                    className="text-primary-400 dark:text-dark-white font-family-secondary font-[500] px-6 py-[8px] rounded-[24px] bg-[#00587E10]"
+                    className="text-primary-400 font-family-secondary font-[500] px-6 py-[8px] rounded-[24px] bg-[#00587E10]"
                   >
                     {agent.tag}
                   </FontResizerWrapper>
@@ -73,7 +73,7 @@ const OurAgentsContactSection = () => {
                         1: "body2",
                         2: "body-2-1",
                       }}
-                      className="text-gray-400 dark:text-dark-white font-family-secondary font-bold"
+                      className="text-gray-400 font-family-secondary font-bold"
                     >
                       {agent.name}
                     </FontResizerWrapper>
@@ -85,7 +85,7 @@ const OurAgentsContactSection = () => {
                         1: "body3",
                         2: "body-3-1",
                       }}
-                      className="text-gray-400 dark:text-dark-white font-family-secondary font-medium"
+                      className="text-gray-400 font-family-secondary font-medium"
                     >
                       {agent.contact}
                     </FontResizerWrapper>
@@ -97,7 +97,7 @@ const OurAgentsContactSection = () => {
                         1: "body3",
                         2: "body-3-1",
                       }}
-                      className="text-gray-400 dark:text-dark-white font-family-secondary font-medium"
+                      className="text-gray-400 font-family-secondary font-medium"
                     >
                       {`Ext : ${agent.extensionNumber}`}
                     </FontResizerWrapper>

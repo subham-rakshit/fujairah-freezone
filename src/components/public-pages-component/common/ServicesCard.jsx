@@ -51,7 +51,7 @@ const ServicesCard = ({ service = {}, delay = 0 }) => {
 
           <BackgroundRevealButton
             btnLabel="Apply Now"
-            textColor="text-gray-400"
+            textColor="text-gray-400 dark:text-gray-400"
             customFontSize={{
               0: "body-0-2",
               1: "body2",

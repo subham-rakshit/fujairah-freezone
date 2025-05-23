@@ -204,7 +204,7 @@ const ContentSection = () => {
                   1: "heading-2",
                   2: "heading-2-1",
                 }}
-                className="text-primary-400 dark:text-dark-white font-family-primary font-[600]"
+                className="text-primary-400 font-family-primary font-[600]"
               >
                 Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 vulputate libero et velit interdum, ac aliquet odio mattis.
@@ -219,7 +219,7 @@ const ContentSection = () => {
                   1: "subtitle-2",
                   2: "subtitle-2-1",
                 }}
-                className="text-gray-400 dark:text-dark-white font-family-primary font-[400]"
+                className="text-gray-400 font-family-primary font-[400]"
               >
                 Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 vulputate libero et velit interdum, ac aliquet odio mattis.

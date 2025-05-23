@@ -45,6 +45,9 @@ const LanguageSwitcher = ({ pathname, currentLanguage = "en" }) => {
       {languageList.length > 0 && (
         <Select
           key="language-selection"
+          // defaultOpen={false}
+          open={false}
+          // disabled={true}
           value={currentLanguage || "en"}
           onValueChange={(value) => setLanguageAction(value)}
         >

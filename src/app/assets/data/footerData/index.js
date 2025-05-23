@@ -45,11 +45,11 @@ export const footer_quick_links = {
   child: [
     {
       name: "About us",
-      link: "#",
+      link: "/about-us?tab=about-fujairah",
     },
     {
       name: "Contact Us",
-      link: "#",
+      link: "/contact-us",
     },
     {
       name: "Career",
@@ -57,19 +57,19 @@ export const footer_quick_links = {
     },
     {
       name: "Investor Corner",
-      link: "#",
+      link: "/investors-corner?tab=business-club",
     },
     {
       name: "Gallery",
-      link: "#",
+      link: "/media-center?tab=photo-gallery",
     },
     {
       name: "News & Event",
-      link: "#",
+      link: "/media-center?tab=news-%26-events",
     },
     {
       name: "FAQs",
-      link: "#",
+      link: "/faqs?tab=category",
     },
   ],
 };

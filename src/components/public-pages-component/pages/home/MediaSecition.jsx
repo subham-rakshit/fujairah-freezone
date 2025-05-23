@@ -40,7 +40,7 @@ const MediaSecition = () => {
   return (
     <section id="home-page-media-section" className="w-full overflow-hidden">
       <div className="relative py-[80px]">
-        <div className="absolute z-[9] top-[10px] w-full h-[140px] bg-light rounded-[150%] flex items-center justify-center">
+        <div className="absolute z-[9] top-[10px] w-full h-[140px] bg-[#F6FAFD] dark:bg-dark rounded-[150%] flex items-center justify-center">
           <SectionInfo heading="Media" />
         </div>
 
@@ -60,7 +60,7 @@ const MediaSecition = () => {
           ))}
         </Slider>
 
-        <div className="absolute z-[9] bottom-[10px] w-full h-[140px] bg-[#F6FAFD] rounded-[150%]" />
+        <div className="absolute z-[9] bottom-[10px] w-full h-[140px] bg-[#F6FAFD] dark:bg-dark rounded-[150%]" />
       </div>
     </section>
   );
